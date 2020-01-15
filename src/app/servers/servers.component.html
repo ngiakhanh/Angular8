@@ -13,6 +13,8 @@
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server</button>
 <!-- <p [innerText]="allowNewServer">{{allowNewServer}}</p> -->
-<p>{{serverCreationStatus}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p> -->
+<!-- <ng-template #noServer>{{serverCreationStatus}}</ng-template> -->
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+<app-server *ngFor="let server of servers"></app-server>
