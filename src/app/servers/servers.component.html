@@ -1,20 +1,7 @@
-<label>Server Name</label>
-<!-- <input
-  type="text"
-  class="form-control"
-  (input)="onUpdateServerName($event)"> -->
-<input
-  type="text"
-  class="form-control"
-  [(ngModel)]="serverName">
-<!-- <p>{{serverName}}</p> -->
 <button
   class="btn btn-primary"
-  [disabled]="!allowNewServer"
-  (click)="onCreateServer()">Add Server</button>
-<!-- <p [innerText]="allowNewServer">{{allowNewServer}}</p> -->
-<!-- <p>{{serverCreationStatus}}</p> -->
-<!-- <p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p> -->
-<!-- <ng-template #noServer>{{serverCreationStatus}}</ng-template> -->
-<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
-<app-server *ngFor="let server of servers"></app-server>
+  (click)="toggleDisplay()">Display Details</button>
+<p *ngIf="toggle">The paragraph shows up!</p>
+<p *ngFor="let item of incrementList"
+[ngStyle]="{backgroundColor: getColor(item)}"
+[ngClass]="{online: item >= 5}">{{item}}</p>
