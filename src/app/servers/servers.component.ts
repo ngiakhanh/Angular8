@@ -15,7 +15,6 @@ export class ServersComponent implements OnInit {
   servers = ['Testserver', 'Testserver 2'];
   toggle = false;
   incrementList = [];
-  increment = 0;
 
   constructor() {
     setTimeout(() => {
@@ -26,20 +25,13 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
-  getColor(item){
-    if (item >= 5){
-      return 'blue';
-    }
-    return 'transparent';
-  }
-
   toggleDisplay(){
     if (this.toggle){
       this.toggle = false;
     } else{
       this.toggle = true;
     }
-    this.incrementList.push(++this.increment);
+    this.incrementList.push(new Date());
   }
 
   onCreateServer() {

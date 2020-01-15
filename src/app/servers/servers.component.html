@@ -2,6 +2,6 @@
   class="btn btn-primary"
   (click)="toggleDisplay()">Display Details</button>
 <p *ngIf="toggle">The paragraph shows up!</p>
-<p *ngFor="let item of incrementList"
-[ngStyle]="{backgroundColor: getColor(item)}"
-[ngClass]="{online: item >= 5}">{{item}}</p>
+<p *ngFor="let item of incrementList; let i = index"
+[ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'transparent'}"
+[ngClass]="{online: i > 3}">{{item}}</p>
