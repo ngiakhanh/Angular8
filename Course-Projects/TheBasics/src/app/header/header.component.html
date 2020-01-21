@@ -5,8 +5,8 @@
     </button>
     <div class="navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="#">Recipe</a>
-            <a class="nav-item nav-link" href="#">Shopping List</a>
+            <a [id]="recipe" class="nav-item nav-link" href="#" (click)="onNavigation($event)">Recipe</a>
+            <a [id]="shoppingList" class="nav-item nav-link" href="#" (click)="onNavigation($event)">Shopping List</a>
         </div>
         <div class="navbar-nav">
             <div class="dropdown">

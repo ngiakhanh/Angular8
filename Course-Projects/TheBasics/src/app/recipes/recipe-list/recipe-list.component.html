@@ -6,13 +6,6 @@
 <hr>
 <div class="row">
   <div class="col-12">
-    <div class="card" *ngFor="let item of recipes">
-      <img class="card-img-top img-fluid clearfix" [src]="item.imagePath" [alt]="item.name">
-      <div class="card-body">
-        <h4 class="card-title">{{item.name}}</h4>
-        <p class="card-text">{{item.description}}</p>
-      </div>
-    </div>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item *ngFor="let item of recipes" [item]="item" (itemOutput)="onChoose($event)"></app-recipe-item>
   </div>
 </div>
