@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-isRecipe = true;
+  isRecipe = true;
+  value = 10;
   onNavigation(navigation: string){
     if (navigation === 'recipe') {
       this.isRecipe = true;

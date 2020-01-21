@@ -5,6 +5,18 @@
         <br>
         <app-recipes *ngIf="isRecipe"></app-recipes>
         <app-shopping-list *ngIf="!isRecipe"></app-shopping-list>
+        <!-- <ng-template [ngIf]="!isRecipe">
+          <app-shopping-list></app-shopping-list>
+        </ng-template> -->
+        <!-- <app-shopping-list *appUnless="isRecipe"></app-shopping-list> -->
       </div>
   </div>
 </div>
+<!-- <p appBasicHighlight>Style me with basic directive!</p>
+<p defaultColor="yellow" [appBetterHighlight]="'red'">Style me with better directive!</p> -->
+<!-- <div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="15">Value is 15</p>
+  <p *ngSwitchDefault>Value is else</p>
+</div> -->
