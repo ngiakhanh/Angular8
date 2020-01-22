@@ -7,15 +7,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 @Output() link = new EventEmitter<string>();
-recipe = "recipe";
-shoppingList = "shoppingList";
+recipe = 'recipe';
+shoppingList = 'shoppingList';
   constructor() { }
 
   ngOnInit() {
   }
 
-  onNavigation(event: MouseEvent) {
-    var id = (event.target as HTMLInputElement).getAttribute("id");
+  onNavigation(event: Event) {
+    const id = (event.target as HTMLElement).getAttribute('id');
     this.link.emit(id);
   }
 }

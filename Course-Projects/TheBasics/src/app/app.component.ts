@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isRecipe = true;
   value = 10;
-  onNavigation(navigation: string){
+  onNavigation(navigation: string) {
     if (navigation === 'recipe') {
       this.isRecipe = true;
-    } else{
+    } else {
       this.isRecipe = false;
     }
   }

@@ -14,7 +14,7 @@ item: Recipe = null;
   ngOnInit() {
   }
 
-  getItem(item){
+  getItem(item) {
     this.item = item;
   }
 }

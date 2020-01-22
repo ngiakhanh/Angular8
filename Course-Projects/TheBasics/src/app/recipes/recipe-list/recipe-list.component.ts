@@ -8,15 +8,15 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   @Output() itemOutput = new EventEmitter<Recipe>();
   recipes: Recipe[] = [
-    new Recipe('WhiteK Recipe', 'Master Recipe', "https://images-na.ssl-images-amazon.com/images/I/718ebRhi9AL.jpg"),
-    new Recipe('Another WhiteK Recipe', 'Another Master Recipe', "https://images-na.ssl-images-amazon.com/images/I/718ebRhi9AL.jpg")
+    new Recipe('WhiteK Recipe', 'Master Recipe', 'https://images-na.ssl-images-amazon.com/images/I/718ebRhi9AL.jpg'),
+    new Recipe('Another WhiteK Recipe', 'Another Master Recipe', 'https://images-na.ssl-images-amazon.com/images/I/718ebRhi9AL.jpg')
   ];
   constructor() { }
 
   ngOnInit() {
   }
 
-  onChoose(event){
+  onChoose(event) {
     this.itemOutput.emit(event);
   }
 }

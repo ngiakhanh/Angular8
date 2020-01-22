@@ -4,11 +4,11 @@
       <div class="col-md-12">
         <br>
         <app-recipes *ngIf="isRecipe"></app-recipes>
-        <app-shopping-list *ngIf="!isRecipe"></app-shopping-list>
+        <!-- <app-shopping-list *ngIf="!isRecipe"></app-shopping-list> -->
         <!-- <ng-template [ngIf]="!isRecipe">
           <app-shopping-list></app-shopping-list>
         </ng-template> -->
-        <!-- <app-shopping-list *appUnless="isRecipe"></app-shopping-list> -->
+        <app-shopping-list *appUnless="isRecipe"></app-shopping-list>
       </div>
   </div>
 </div>
