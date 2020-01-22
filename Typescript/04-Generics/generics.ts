@@ -8,4 +8,4 @@ let numberArray: Array<number>; // This array will only accept numbers
 // Try to initialize it with strings
 
 // numberArray = ['test']; // => Error
-numberArray = [1,2,3];
+numberArray = [1,2,3,4];
