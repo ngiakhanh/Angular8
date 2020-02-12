@@ -14,7 +14,7 @@ export class DropdownDirective implements OnInit {
 
   @HostListener('document:click', ['$event']) mouseClick(eventData: Event) {
     const childElement = this.elRef.nativeElement.children[this.position];
-    if (!this.elRef.nativeElement.contains(eventData.target)) {
+    if (!this.elRef.nativeElement.contains(eventData.target) && !childElement.contains(eventData.target)) {
       this.toggleClass(childElement, false);
     } else {
       this.toggleClass(childElement, true);
